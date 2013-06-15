@@ -28,6 +28,7 @@
 		1DA26C1B176CABA100D30ABF /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DA26C16176CABA100D30ABF /* Default@2x.png */; };
 		1DA26C27176CAFC400D30ABF /* book.json in Resources */ = {isa = PBXBuildFile; fileRef = 1DA26C26176CAFC400D30ABF /* book.json */; };
 		1DA26C2A176CAFE000D30ABF /* GGBook.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DA26C29176CAFE000D30ABF /* GGBook.m */; };
+		1DA26C31176CB23000D30ABF /* GGBook+RKMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DA26C30176CB22F00D30ABF /* GGBook+RKMapping.m */; };
 		CF21215D4FFE4E27B770A15C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 742F461F5EC440939C19832A /* libPods.a */; };
 		FFD0BBFA25FF44DA89578B47 /* libPods-test.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 85B014C887034962A8AD126F /* libPods-test.a */; };
 /* End PBXBuildFile section */
@@ -71,6 +72,9 @@
 		1DA26C26176CAFC400D30ABF /* book.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = book.json; sourceTree = "<group>"; };
 		1DA26C28176CAFE000D30ABF /* GGBook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGBook.h; sourceTree = "<group>"; };
 		1DA26C29176CAFE000D30ABF /* GGBook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGBook.m; sourceTree = "<group>"; };
+		1DA26C2E176CB21600D30ABF /* GGMappedEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGMappedEntity.h; sourceTree = "<group>"; };
+		1DA26C2F176CB22F00D30ABF /* GGBook+RKMapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GGBook+RKMapping.h"; sourceTree = "<group>"; };
+		1DA26C30176CB22F00D30ABF /* GGBook+RKMapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GGBook+RKMapping.m"; sourceTree = "<group>"; };
 		62465A3AA16D46CA9D40ABAD /* Pods-test.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-test.xcconfig"; path = "../Pods/Pods-test.xcconfig"; sourceTree = SOURCE_ROOT; };
 		742F461F5EC440939C19832A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		85B014C887034962A8AD126F /* libPods-test.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-test.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -401,6 +405,9 @@
 		1DA26C2C176CB0F200D30ABF /* mappings */ = {
 			isa = PBXGroup;
 			children = (
+				1DA26C2F176CB22F00D30ABF /* GGBook+RKMapping.h */,
+				1DA26C30176CB22F00D30ABF /* GGBook+RKMapping.m */,
+				1DA26C2E176CB21600D30ABF /* GGMappedEntity.h */,
 			);
 			path = mappings;
 			sourceTree = "<group>";
@@ -585,6 +592,7 @@
 				1DA26BF7176CAB0200D30ABF /* GGDetailViewController.m in Sources */,
 				1DA26BF8176CAB0200D30ABF /* GGMasterViewController.m in Sources */,
 				1DA26C2A176CAFE000D30ABF /* GGBook.m in Sources */,
+				1DA26C31176CB23000D30ABF /* GGBook+RKMapping.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
