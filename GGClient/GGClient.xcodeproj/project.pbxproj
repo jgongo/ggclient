@@ -26,6 +26,8 @@
 		1DA26C19176CABA100D30ABF /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DA26C14176CABA100D30ABF /* Default-568h@2x.png */; };
 		1DA26C1A176CABA100D30ABF /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DA26C15176CABA100D30ABF /* Default.png */; };
 		1DA26C1B176CABA100D30ABF /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DA26C16176CABA100D30ABF /* Default@2x.png */; };
+		CF21215D4FFE4E27B770A15C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 742F461F5EC440939C19832A /* libPods.a */; };
+		FFD0BBFA25FF44DA89578B47 /* libPods-test.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 85B014C887034962A8AD126F /* libPods-test.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +66,10 @@
 		1DA26C14176CABA100D30ABF /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		1DA26C15176CABA100D30ABF /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		1DA26C16176CABA100D30ABF /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		62465A3AA16D46CA9D40ABAD /* Pods-test.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-test.xcconfig"; path = "../Pods/Pods-test.xcconfig"; sourceTree = SOURCE_ROOT; };
+		742F461F5EC440939C19832A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		85B014C887034962A8AD126F /* libPods-test.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-test.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AFDEE792643B4F3E896B9BAB /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = ../Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +80,7 @@
 				1DA26BAC176CA79000D30ABF /* UIKit.framework in Frameworks */,
 				1DA26BAE176CA79000D30ABF /* Foundation.framework in Frameworks */,
 				1DA26BB0176CA79000D30ABF /* CoreGraphics.framework in Frameworks */,
+				CF21215D4FFE4E27B770A15C /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,6 +91,7 @@
 				1DA26BD3176CA79000D30ABF /* SenTestingKit.framework in Frameworks */,
 				1DA26BD4176CA79000D30ABF /* UIKit.framework in Frameworks */,
 				1DA26BD5176CA79000D30ABF /* Foundation.framework in Frameworks */,
+				FFD0BBFA25FF44DA89578B47 /* libPods-test.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,6 +105,8 @@
 				1DA26BD8176CA79000D30ABF /* GGClientTests */,
 				1DA26BAA176CA79000D30ABF /* Frameworks */,
 				1DA26BA9176CA79000D30ABF /* Products */,
+				AFDEE792643B4F3E896B9BAB /* Pods.xcconfig */,
+				62465A3AA16D46CA9D40ABAD /* Pods-test.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -116,6 +126,8 @@
 				1DA26BAD176CA79000D30ABF /* Foundation.framework */,
 				1DA26BAF176CA79000D30ABF /* CoreGraphics.framework */,
 				1DA26BD2176CA79000D30ABF /* SenTestingKit.framework */,
+				742F461F5EC440939C19832A /* libPods.a */,
+				85B014C887034962A8AD126F /* libPods-test.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -344,9 +356,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1DA26BE3176CA79000D30ABF /* Build configuration list for PBXNativeTarget "GGClient" */;
 			buildPhases = (
+				AAB591BB46854C3986F4721F /* Check Pods Manifest.lock */,
 				1DA26BA4176CA79000D30ABF /* Sources */,
 				1DA26BA5176CA79000D30ABF /* Frameworks */,
 				1DA26BA6176CA79000D30ABF /* Resources */,
+				DC97C0FC8ED043399504EC59 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -361,10 +375,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1DA26BE6176CA79000D30ABF /* Build configuration list for PBXNativeTarget "GGClientTests" */;
 			buildPhases = (
+				21F2E6D8F27D46FE966CF2B8 /* Check Pods Manifest.lock */,
 				1DA26BCC176CA79000D30ABF /* Sources */,
 				1DA26BCD176CA79000D30ABF /* Frameworks */,
 				1DA26BCE176CA79000D30ABF /* Resources */,
 				1DA26BCF176CA79000D30ABF /* ShellScript */,
+				87B3C191AC5442C2882BE902 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -443,6 +459,62 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+		21F2E6D8F27D46FE966CF2B8 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+		};
+		87B3C191AC5442C2882BE902 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/../Pods/Pods-test-resources.sh\"\n";
+		};
+		AAB591BB46854C3986F4721F /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+		};
+		DC97C0FC8ED043399504EC59 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/../Pods/Pods-resources.sh\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -561,6 +633,7 @@
 		};
 		1DA26BE4176CA79000D30ABF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AFDEE792643B4F3E896B9BAB /* Pods.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GGClient/GGClient-Prefix.pch";
@@ -572,6 +645,7 @@
 		};
 		1DA26BE5176CA79000D30ABF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AFDEE792643B4F3E896B9BAB /* Pods.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GGClient/GGClient-Prefix.pch";
@@ -583,12 +657,9 @@
 		};
 		1DA26BE7176CA79000D30ABF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 62465A3AA16D46CA9D40ABAD /* Pods-test.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/GGClient.app/GGClient";
-				FRAMEWORK_SEARCH_PATHS = (
-					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
-					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
-				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GGClient/GGClient-Prefix.pch";
 				INFOPLIST_FILE = "GGClientTests/GGClientTests-Info.plist";
@@ -600,12 +671,9 @@
 		};
 		1DA26BE8176CA79000D30ABF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 62465A3AA16D46CA9D40ABAD /* Pods-test.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/GGClient.app/GGClient";
-				FRAMEWORK_SEARCH_PATHS = (
-					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
-					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
-				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GGClient/GGClient-Prefix.pch";
 				INFOPLIST_FILE = "GGClientTests/GGClientTests-Info.plist";
