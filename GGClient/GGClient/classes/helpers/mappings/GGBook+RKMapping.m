@@ -12,7 +12,10 @@
 @implementation GGBook (RKMapping)
 
 + (RKMapping *)mapping {
-    return nil;
+    RKObjectMapping *mapping = [RKObjectMapping mappingForClass:[GGBook class]];
+    [mapping addAttributeMappingsFromDictionary:@{@"id": @"identifier", @"image": @"imageURL"}];
+    [mapping addAttributeMappingsFromArray:@[@"title", @"author", @"price"]];
+    return mapping;
 }
 
 @end

@@ -12,9 +12,6 @@
 		1DA26BB0176CA79000D30ABF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DA26BAF176CA79000D30ABF /* CoreGraphics.framework */; };
 		1DA26BB6176CA79000D30ABF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1DA26BB4176CA79000D30ABF /* InfoPlist.strings */; };
 		1DA26BB8176CA79000D30ABF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DA26BB7176CA79000D30ABF /* main.m */; };
-		1DA26BBE176CA79000D30ABF /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DA26BBD176CA79000D30ABF /* Default.png */; };
-		1DA26BC0176CA79000D30ABF /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DA26BBF176CA79000D30ABF /* Default@2x.png */; };
-		1DA26BC2176CA79000D30ABF /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DA26BC1176CA79000D30ABF /* Default-568h@2x.png */; };
 		1DA26BD3176CA79000D30ABF /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DA26BD2176CA79000D30ABF /* SenTestingKit.framework */; };
 		1DA26BD4176CA79000D30ABF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DA26BAB176CA79000D30ABF /* UIKit.framework */; };
 		1DA26BD5176CA79000D30ABF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DA26BAD176CA79000D30ABF /* Foundation.framework */; };
@@ -23,17 +20,18 @@
 		1DA26BF7176CAB0200D30ABF /* GGDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DA26BEF176CAB0200D30ABF /* GGDetailViewController.m */; };
 		1DA26BF8176CAB0200D30ABF /* GGMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DA26BF1176CAB0200D30ABF /* GGMasterViewController.m */; };
 		1DA26C18176CABA100D30ABF /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DA26C11176CABA100D30ABF /* MainStoryboard.storyboard */; };
-		1DA26C19176CABA100D30ABF /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DA26C14176CABA100D30ABF /* Default-568h@2x.png */; };
-		1DA26C1A176CABA100D30ABF /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DA26C15176CABA100D30ABF /* Default.png */; };
-		1DA26C1B176CABA100D30ABF /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DA26C16176CABA100D30ABF /* Default@2x.png */; };
 		1DA26C27176CAFC400D30ABF /* book.json in Resources */ = {isa = PBXBuildFile; fileRef = 1DA26C26176CAFC400D30ABF /* book.json */; };
 		1DA26C2A176CAFE000D30ABF /* GGBook.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DA26C29176CAFE000D30ABF /* GGBook.m */; };
 		1DA26C31176CB23000D30ABF /* GGBook+RKMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DA26C30176CB22F00D30ABF /* GGBook+RKMapping.m */; };
+		1DA26C33176CB2CB00D30ABF /* GGBookMappingSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DA26C32176CB2CB00D30ABF /* GGBookMappingSpec.m */; };
 		1DA26C37176CB40F00D30ABF /* GGClientMappingCatalog.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DA26C36176CB40E00D30ABF /* GGClientMappingCatalog.m */; };
 		1DA26C3A176CB66100D30ABF /* INRestKitHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DA26C39176CB66100D30ABF /* INRestKitHelper.m */; };
 		1DA26C3D176CB80900D30ABF /* INMappedEntitiesCatalog.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DA26C3C176CB80900D30ABF /* INMappedEntitiesCatalog.m */; };
 		1DA26C40176CB8C100D30ABF /* GGClientAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DA26C3F176CB8BF00D30ABF /* GGClientAssembly.m */; };
 		1DA26C46176CB97D00D30ABF /* GGClientAssembly+Testing.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DA26C45176CB97D00D30ABF /* GGClientAssembly+Testing.m */; };
+		1DBBBA29176CC32600ACF8AC /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DBBBA28176CC32600ACF8AC /* Default.png */; };
+		1DBBBA2B176CC32E00ACF8AC /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DBBBA2A176CC32E00ACF8AC /* Default@2x.png */; };
+		1DBBBA2D176CC33500ACF8AC /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DBBBA2C176CC33500ACF8AC /* Default-568h@2x.png */; };
 		CF21215D4FFE4E27B770A15C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 742F461F5EC440939C19832A /* libPods.a */; };
 		FFD0BBFA25FF44DA89578B47 /* libPods-test.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 85B014C887034962A8AD126F /* libPods-test.a */; };
 /* End PBXBuildFile section */
@@ -57,9 +55,6 @@
 		1DA26BB5176CA79000D30ABF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1DA26BB7176CA79000D30ABF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1DA26BB9176CA79000D30ABF /* GGClient-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GGClient-Prefix.pch"; sourceTree = "<group>"; };
-		1DA26BBD176CA79000D30ABF /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		1DA26BBF176CA79000D30ABF /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		1DA26BC1176CA79000D30ABF /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		1DA26BD1176CA79000D30ABF /* GGClientTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GGClientTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DA26BD2176CA79000D30ABF /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		1DA26BDA176CA79000D30ABF /* GGClientTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GGClientTests-Info.plist"; sourceTree = "<group>"; };
@@ -71,15 +66,13 @@
 		1DA26BF0176CAB0200D30ABF /* GGMasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGMasterViewController.h; sourceTree = "<group>"; };
 		1DA26BF1176CAB0200D30ABF /* GGMasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGMasterViewController.m; sourceTree = "<group>"; };
 		1DA26C12176CABA100D30ABF /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		1DA26C14176CABA100D30ABF /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		1DA26C15176CABA100D30ABF /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		1DA26C16176CABA100D30ABF /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		1DA26C26176CAFC400D30ABF /* book.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = book.json; sourceTree = "<group>"; };
 		1DA26C28176CAFE000D30ABF /* GGBook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGBook.h; sourceTree = "<group>"; };
 		1DA26C29176CAFE000D30ABF /* GGBook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGBook.m; sourceTree = "<group>"; };
 		1DA26C2E176CB21600D30ABF /* INMappedEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INMappedEntity.h; sourceTree = "<group>"; };
 		1DA26C2F176CB22F00D30ABF /* GGBook+RKMapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GGBook+RKMapping.h"; sourceTree = "<group>"; };
 		1DA26C30176CB22F00D30ABF /* GGBook+RKMapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GGBook+RKMapping.m"; sourceTree = "<group>"; };
+		1DA26C32176CB2CB00D30ABF /* GGBookMappingSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGBookMappingSpec.m; sourceTree = "<group>"; };
 		1DA26C34176CB3D100D30ABF /* INMappingCatalog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = INMappingCatalog.h; sourceTree = "<group>"; };
 		1DA26C35176CB40D00D30ABF /* GGClientMappingCatalog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGClientMappingCatalog.h; sourceTree = "<group>"; };
 		1DA26C36176CB40E00D30ABF /* GGClientMappingCatalog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGClientMappingCatalog.m; sourceTree = "<group>"; };
@@ -91,6 +84,9 @@
 		1DA26C3F176CB8BF00D30ABF /* GGClientAssembly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGClientAssembly.m; sourceTree = "<group>"; };
 		1DA26C44176CB97C00D30ABF /* GGClientAssembly+Testing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GGClientAssembly+Testing.h"; sourceTree = "<group>"; };
 		1DA26C45176CB97D00D30ABF /* GGClientAssembly+Testing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GGClientAssembly+Testing.m"; sourceTree = "<group>"; };
+		1DBBBA28176CC32600ACF8AC /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		1DBBBA2A176CC32E00ACF8AC /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		1DBBBA2C176CC33500ACF8AC /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		62465A3AA16D46CA9D40ABAD /* Pods-test.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-test.xcconfig"; path = "../Pods/Pods-test.xcconfig"; sourceTree = SOURCE_ROOT; };
 		742F461F5EC440939C19832A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		85B014C887034962A8AD126F /* libPods-test.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-test.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -174,9 +170,6 @@
 				1DA26BB4176CA79000D30ABF /* InfoPlist.strings */,
 				1DA26BB7176CA79000D30ABF /* main.m */,
 				1DA26BB9176CA79000D30ABF /* GGClient-Prefix.pch */,
-				1DA26BBD176CA79000D30ABF /* Default.png */,
-				1DA26BBF176CA79000D30ABF /* Default@2x.png */,
-				1DA26BC1176CA79000D30ABF /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -319,9 +312,9 @@
 		1DA26C13176CABA100D30ABF /* ios-images */ = {
 			isa = PBXGroup;
 			children = (
-				1DA26C14176CABA100D30ABF /* Default-568h@2x.png */,
-				1DA26C15176CABA100D30ABF /* Default.png */,
-				1DA26C16176CABA100D30ABF /* Default@2x.png */,
+				1DBBBA2C176CC33500ACF8AC /* Default-568h@2x.png */,
+				1DBBBA28176CC32600ACF8AC /* Default.png */,
+				1DBBBA2A176CC32E00ACF8AC /* Default@2x.png */,
 			);
 			path = "ios-images";
 			sourceTree = "<group>";
@@ -420,6 +413,7 @@
 		1DA26C2B176CB0D900D30ABF /* mappings */ = {
 			isa = PBXGroup;
 			children = (
+				1DA26C32176CB2CB00D30ABF /* GGBookMappingSpec.m */,
 			);
 			path = mappings;
 			sourceTree = "<group>";
@@ -516,13 +510,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				1DA26BB6176CA79000D30ABF /* InfoPlist.strings in Resources */,
-				1DA26BBE176CA79000D30ABF /* Default.png in Resources */,
-				1DA26BC0176CA79000D30ABF /* Default@2x.png in Resources */,
-				1DA26BC2176CA79000D30ABF /* Default-568h@2x.png in Resources */,
 				1DA26C18176CABA100D30ABF /* MainStoryboard.storyboard in Resources */,
-				1DA26C19176CABA100D30ABF /* Default-568h@2x.png in Resources */,
-				1DA26C1A176CABA100D30ABF /* Default.png in Resources */,
-				1DA26C1B176CABA100D30ABF /* Default@2x.png in Resources */,
+				1DBBBA29176CC32600ACF8AC /* Default.png in Resources */,
+				1DBBBA2B176CC32E00ACF8AC /* Default@2x.png in Resources */,
+				1DBBBA2D176CC33500ACF8AC /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -630,6 +621,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1DA26C33176CB2CB00D30ABF /* GGBookMappingSpec.m in Sources */,
 				1DA26C3A176CB66100D30ABF /* INRestKitHelper.m in Sources */,
 				1DA26C46176CB97D00D30ABF /* GGClientAssembly+Testing.m in Sources */,
 			);
@@ -760,6 +752,10 @@
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/GGClient.app/GGClient";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GGClient/GGClient-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"${PODS_HEADERS_SEARCH_PATHS}",
+					"$(SDKROOT)/usr/include/libxml2",
+				);
 				INFOPLIST_FILE = "GGClientTests/GGClientTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
@@ -774,6 +770,10 @@
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/GGClient.app/GGClient";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GGClient/GGClient-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"${PODS_HEADERS_SEARCH_PATHS}",
+					"$(SDKROOT)/usr/include/libxml2",
+				);
 				INFOPLIST_FILE = "GGClientTests/GGClientTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";

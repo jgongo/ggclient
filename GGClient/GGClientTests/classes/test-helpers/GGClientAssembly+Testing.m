@@ -8,6 +8,7 @@
 
 #import "GGClientAssembly+Testing.h"
 #import <Typhoon/Typhoon.h>
+#import "INRestKitHelper.h"
 
 
 @implementation GGClientAssembly (Testing)
