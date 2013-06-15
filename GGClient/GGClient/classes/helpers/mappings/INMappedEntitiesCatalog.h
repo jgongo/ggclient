@@ -1,5 +1,5 @@
 //
-//  GGMappedEntity.h
+//  INMappedEntitiesCatalog.h
 //  GGClient
 //
 //  Created by Jose Gonzalez Gomez on 15/06/13.
@@ -7,9 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <RestKit/RestKit.h>
+#import "INMappingCatalog.h"
 
 
-@protocol GGMappedEntity <NSObject>
-+ (RKMapping *)mapping;
+@interface INMappedEntitiesCatalog : NSObject <INMappingCatalog>
 @end
