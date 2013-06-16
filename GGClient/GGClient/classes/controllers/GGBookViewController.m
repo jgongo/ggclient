@@ -7,47 +7,47 @@
 //
 
 #import "GGBookViewController.h"
+#import <UIActivityIndicator-for-SDWebImage/UIImageView+UIActivityIndicatorForSDWebImage.h>
+#import "UIViewController+CatalogService.h"
 
 
 @interface GGBookViewController ()
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+@property (weak, nonatomic) IBOutlet UILabel *authorLabel;
+@property (weak, nonatomic) IBOutlet UILabel *priceLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
 - (void)configureView;
 @end
 
 
 @implementation GGBookViewController
 
-#pragma mark - Managing the detail item
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    [self configureView];
+    
+}
 
 - (void)setBook:(GGBook *)book
 {
     if (_book != book) {
-        book = book;
-        
-        // Update the view.
+        _book = book;
         [self configureView];
     }
 }
 
 - (void)configureView
 {
-    // Update the user interface for the detail item.
-
     if (self.book) {
-        self.detailDescriptionLabel.text = self.book.title;
+        self.navigationItem.title = self.book.title;
+        self.titleLabel.text  = self.book.title;
+        self.authorLabel.text = self.book.author;
+//        self.priceLabel.text  = self.book.price;
+        if (self.book.imageURL) {
+            [self.imageView setImageWithURL:self.book.imageURL usingActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+        }
     }
-}
-
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
-    [self configureView];
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 @end

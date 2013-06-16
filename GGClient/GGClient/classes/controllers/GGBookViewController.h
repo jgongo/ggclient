@@ -12,5 +12,4 @@
 
 @interface GGBookViewController : UIViewController
 @property (nonatomic, strong) GGBook *book;
-@property (nonatomic, weak  ) IBOutlet UILabel *detailDescriptionLabel;
 @end

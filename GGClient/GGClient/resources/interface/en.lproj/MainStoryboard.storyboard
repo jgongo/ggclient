@@ -47,7 +47,7 @@
                                 </view>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
-                                    <segue destination="21" kind="push" identifier="showDetail" id="jZb-fq-zAk"/>
+                                    <segue destination="21" kind="push" identifier="segue.book" id="jZb-fq-zAk"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" reuseIdentifier="ACTIVITY_CELL" id="G0U-lt-X5n">
@@ -73,7 +73,7 @@
                             <outlet property="delegate" destination="12" id="15"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Master" id="36"/>
+                    <navigationItem key="navigationItem" title="Catalog" id="36"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="17" sceneMemberID="firstResponder"/>
             </objects>
@@ -87,23 +87,74 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Detail view content goes here" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="27">
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" size="system"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hLO-qN-lNt">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" type="user" id="0JA-qE-xCz"/>
+                                    <constraint firstAttribute="height" constant="100" type="user" id="KH1-lc-UcD"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="The book that was never written" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WRp-eE-IP1">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Author" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rhc-Ro-YgI">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="cKt-Md-JJF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LMB-Xx-D7h">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="ZF9-bJ-vqW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jwa-9H-lOl">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="yAd-oQ-Vk0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Price" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o3n-hG-uBu">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="27" firstAttribute="centerY" secondItem="22" secondAttribute="centerY" type="default" id="7cE-gL-0wv"/>
-                            <constraint firstItem="27" firstAttribute="leading" secondItem="22" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="R0m-z7-TWk"/>
-                            <constraint firstAttribute="trailing" secondItem="27" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="pRe-qY-58T"/>
+                            <constraint firstItem="Rhc-Ro-YgI" firstAttribute="leading" secondItem="hLO-qN-lNt" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="0AQ-vH-8DG"/>
+                            <constraint firstAttribute="trailing" secondItem="LMB-Xx-D7h" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="6Pk-Ea-lbs"/>
+                            <constraint firstAttribute="trailing" secondItem="jwa-9H-lOl" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="7Pw-1g-jaV"/>
+                            <constraint firstAttribute="trailing" secondItem="WRp-eE-IP1" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Csb-24-ORb"/>
+                            <constraint firstItem="Rhc-Ro-YgI" firstAttribute="top" secondItem="WRp-eE-IP1" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="FSA-Ml-QSH"/>
+                            <constraint firstItem="WRp-eE-IP1" firstAttribute="top" secondItem="22" secondAttribute="top" constant="20" symbolic="YES" type="default" id="HI6-5s-tlQ"/>
+                            <constraint firstItem="jwa-9H-lOl" firstAttribute="top" secondItem="Rhc-Ro-YgI" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="IB0-h4-EsD"/>
+                            <constraint firstItem="LMB-Xx-D7h" firstAttribute="leading" secondItem="hLO-qN-lNt" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="IP5-JK-AQY"/>
+                            <constraint firstItem="jwa-9H-lOl" firstAttribute="leading" secondItem="hLO-qN-lNt" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="T4e-sT-ajU"/>
+                            <constraint firstItem="hLO-qN-lNt" firstAttribute="leading" secondItem="22" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="TD8-yq-sil"/>
+                            <constraint firstItem="o3n-hG-uBu" firstAttribute="top" secondItem="jwa-9H-lOl" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="XTS-A9-Lby"/>
+                            <constraint firstAttribute="trailing" secondItem="Rhc-Ro-YgI" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="YYf-Ri-CU4"/>
+                            <constraint firstItem="WRp-eE-IP1" firstAttribute="leading" secondItem="22" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="bgK-HR-CEh"/>
+                            <constraint firstItem="LMB-Xx-D7h" firstAttribute="top" secondItem="o3n-hG-uBu" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="nWV-pc-GJU"/>
+                            <constraint firstItem="hLO-qN-lNt" firstAttribute="top" secondItem="WRp-eE-IP1" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="oLG-RV-bIh"/>
+                            <constraint firstItem="o3n-hG-uBu" firstAttribute="leading" secondItem="hLO-qN-lNt" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="ov2-nv-zpZ"/>
+                            <constraint firstAttribute="trailing" secondItem="o3n-hG-uBu" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="qCm-0T-mxQ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Detail" id="26"/>
                     <connections>
-                        <outlet property="detailDescriptionLabel" destination="27" id="28"/>
+                        <outlet property="authorLabel" destination="jwa-9H-lOl" id="Miz-h9-a5x"/>
+                        <outlet property="imageView" destination="hLO-qN-lNt" id="SBJ-BQ-BrP"/>
+                        <outlet property="priceLabel" destination="LMB-Xx-D7h" id="KtG-jz-IuB"/>
+                        <outlet property="titleLabel" destination="WRp-eE-IP1" id="Hpl-8t-dNH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="23" sceneMemberID="firstResponder"/>
@@ -115,7 +166,10 @@
         <class className="GGBookViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/GGBookViewController.h"/>
             <relationships>
-                <relationship kind="outlet" name="detailDescriptionLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="authorLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="imageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="priceLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="titleLabel" candidateClass="UILabel"/>
             </relationships>
         </class>
         <class className="GGCatalogViewController" superclassName="UITableViewController">

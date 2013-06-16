@@ -22,6 +22,7 @@ pod 'NSLogger-CocoaLumberjack-connector', '1.3'
 
 # UI
 pod 'TSMessages',      '0.9.3'
+pod 'UIActivityIndicator-for-SDWebImage', '1.0.0'
 
 target :test, :exclusive => true do
     link_with 'GGClientTests'
