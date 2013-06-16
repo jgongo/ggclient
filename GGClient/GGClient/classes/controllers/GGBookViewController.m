@@ -6,13 +6,13 @@
 //  Copyright (c) 2013 OPEN input. All rights reserved.
 //
 
-#import "GGDetailViewController.h"
+#import "GGBookViewController.h"
 
-@interface GGDetailViewController ()
+@interface GGBookViewController ()
 - (void)configureView;
 @end
 
-@implementation GGDetailViewController
+@implementation GGBookViewController
 
 #pragma mark - Managing the detail item
 

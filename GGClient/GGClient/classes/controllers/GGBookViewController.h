@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface GGDetailViewController : UIViewController
+@interface GGBookViewController : UIViewController
 
 @property (strong, nonatomic) id detailItem;
 

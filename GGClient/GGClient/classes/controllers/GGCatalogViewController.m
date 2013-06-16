@@ -6,16 +6,16 @@
 //  Copyright (c) 2013 OPEN input. All rights reserved.
 //
 
-#import "GGMasterViewController.h"
+#import "GGCatalogViewController.h"
 
-#import "GGDetailViewController.h"
+#import "GGBookViewController.h"
 
-@interface GGMasterViewController () {
+@interface GGCatalogViewController () {
     NSMutableArray *_objects;
 }
 @end
 
-@implementation GGMasterViewController
+@implementation GGCatalogViewController
 
 - (void)awakeFromNib
 {

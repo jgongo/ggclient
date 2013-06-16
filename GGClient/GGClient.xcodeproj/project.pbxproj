@@ -17,8 +17,8 @@
 		1DA26BD5176CA79000D30ABF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DA26BAD176CA79000D30ABF /* Foundation.framework */; };
 		1DA26BDD176CA79000D30ABF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1DA26BDB176CA79000D30ABF /* InfoPlist.strings */; };
 		1DA26BF6176CAB0200D30ABF /* GGAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DA26BEC176CAB0200D30ABF /* GGAppDelegate.m */; };
-		1DA26BF7176CAB0200D30ABF /* GGDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DA26BEF176CAB0200D30ABF /* GGDetailViewController.m */; };
-		1DA26BF8176CAB0200D30ABF /* GGMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DA26BF1176CAB0200D30ABF /* GGMasterViewController.m */; };
+		1DA26BF7176CAB0200D30ABF /* GGBookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DA26BEF176CAB0200D30ABF /* GGBookViewController.m */; };
+		1DA26BF8176CAB0200D30ABF /* GGCatalogViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DA26BF1176CAB0200D30ABF /* GGCatalogViewController.m */; };
 		1DA26C18176CABA100D30ABF /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DA26C11176CABA100D30ABF /* MainStoryboard.storyboard */; };
 		1DA26C27176CAFC400D30ABF /* book.json in Resources */ = {isa = PBXBuildFile; fileRef = 1DA26C26176CAFC400D30ABF /* book.json */; };
 		1DA26C2A176CAFE000D30ABF /* GGBook.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DA26C29176CAFE000D30ABF /* GGBook.m */; };
@@ -70,10 +70,10 @@
 		1DA26BDC176CA79000D30ABF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1DA26BEB176CAB0200D30ABF /* GGAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGAppDelegate.h; sourceTree = "<group>"; };
 		1DA26BEC176CAB0200D30ABF /* GGAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGAppDelegate.m; sourceTree = "<group>"; };
-		1DA26BEE176CAB0200D30ABF /* GGDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGDetailViewController.h; sourceTree = "<group>"; };
-		1DA26BEF176CAB0200D30ABF /* GGDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGDetailViewController.m; sourceTree = "<group>"; };
-		1DA26BF0176CAB0200D30ABF /* GGMasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGMasterViewController.h; sourceTree = "<group>"; };
-		1DA26BF1176CAB0200D30ABF /* GGMasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGMasterViewController.m; sourceTree = "<group>"; };
+		1DA26BEE176CAB0200D30ABF /* GGBookViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGBookViewController.h; sourceTree = "<group>"; };
+		1DA26BEF176CAB0200D30ABF /* GGBookViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGBookViewController.m; sourceTree = "<group>"; };
+		1DA26BF0176CAB0200D30ABF /* GGCatalogViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGCatalogViewController.h; sourceTree = "<group>"; };
+		1DA26BF1176CAB0200D30ABF /* GGCatalogViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGCatalogViewController.m; sourceTree = "<group>"; };
 		1DA26C12176CABA100D30ABF /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		1DA26C26176CAFC400D30ABF /* book.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = book.json; sourceTree = "<group>"; };
 		1DA26C28176CAFE000D30ABF /* GGBook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGBook.h; sourceTree = "<group>"; };
@@ -240,10 +240,10 @@
 		1DA26BED176CAB0200D30ABF /* controllers */ = {
 			isa = PBXGroup;
 			children = (
-				1DA26BEE176CAB0200D30ABF /* GGDetailViewController.h */,
-				1DA26BEF176CAB0200D30ABF /* GGDetailViewController.m */,
-				1DA26BF0176CAB0200D30ABF /* GGMasterViewController.h */,
-				1DA26BF1176CAB0200D30ABF /* GGMasterViewController.m */,
+				1DA26BEE176CAB0200D30ABF /* GGBookViewController.h */,
+				1DA26BEF176CAB0200D30ABF /* GGBookViewController.m */,
+				1DA26BF0176CAB0200D30ABF /* GGCatalogViewController.h */,
+				1DA26BF1176CAB0200D30ABF /* GGCatalogViewController.m */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -660,8 +660,8 @@
 			files = (
 				1DA26BB8176CA79000D30ABF /* main.m in Sources */,
 				1DA26BF6176CAB0200D30ABF /* GGAppDelegate.m in Sources */,
-				1DA26BF7176CAB0200D30ABF /* GGDetailViewController.m in Sources */,
-				1DA26BF8176CAB0200D30ABF /* GGMasterViewController.m in Sources */,
+				1DA26BF7176CAB0200D30ABF /* GGBookViewController.m in Sources */,
+				1DA26BF8176CAB0200D30ABF /* GGCatalogViewController.m in Sources */,
 				1DA26C2A176CAFE000D30ABF /* GGBook.m in Sources */,
 				1DA26C31176CB23000D30ABF /* GGBook+RKMapping.m in Sources */,
 				1DA26C3D176CB80900D30ABF /* INMappedEntitiesCatalog.m in Sources */,
