@@ -8,6 +8,7 @@
 
 #import "GGCatalogViewController.h"
 #import "UIViewController+CatalogService.h"
+#import <TSMessages/TSMessage.h>
 #import "GGBookViewController.h"
 #import "GGCatalogPageRetriever.h"
 
@@ -36,7 +37,7 @@
         self.paginationState = paginationState;
         [self.tableView reloadData];
     } onError:^(NSError *error) {
-        
+        [TSMessage showNotificationInViewController:self withTitle:@"Error" withMessage:@"Ups, there was some error retrieving book list" withType:TSMessageNotificationTypeError withDuration:3.0];
     }];
 }
 
@@ -62,6 +63,7 @@
     } onError:^(NSError *error) {
         self.activityIndicatorVisible = NO;
         [self.tableView deleteRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:self.books.count inSection:0]] withRowAnimation:UITableViewRowAnimationFade];
+        [TSMessage showNotificationInViewController:self withTitle:@"Error" withMessage:@"Ups, there was some error retrieving book list" withType:TSMessageNotificationTypeError withDuration:3.0];
     }];
 }
 

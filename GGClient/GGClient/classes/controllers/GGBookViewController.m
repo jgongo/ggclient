@@ -30,7 +30,7 @@
     [self.catalogService getBookWithId:self.book.identifier onSuccess:^(GGBook *book) {
         self.book = book;
     } onError:^(NSError *error) {
-        [TSMessage showNotificationInViewController:self withTitle:@"Error" withMessage:@"Ups, there was some error retrieving book info" withType:TSMessageNotificationTypeError withDuration:1.0];
+        [TSMessage showNotificationInViewController:self withTitle:@"Error" withMessage:@"Ups, there was some error retrieving book info" withType:TSMessageNotificationTypeError withDuration:3.0];
     }];
 }
 
