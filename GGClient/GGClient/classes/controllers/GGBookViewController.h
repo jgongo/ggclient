@@ -7,10 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GGBook.h"
+
 
 @interface GGBookViewController : UIViewController
-
-@property (strong, nonatomic) id detailItem;
-
-@property (weak, nonatomic) IBOutlet UILabel *detailDescriptionLabel;
+@property (nonatomic, strong) GGBook *book;
+@property (nonatomic, weak  ) IBOutlet UILabel *detailDescriptionLabel;
 @end

@@ -41,6 +41,8 @@
 		1DBBBA48176DB56B00ACF8AC /* catalog.properties in Resources */ = {isa = PBXBuildFile; fileRef = 1DBBBA47176DB56B00ACF8AC /* catalog.properties */; };
 		1DBBBA4A176DE7C100ACF8AC /* network.books.json in Resources */ = {isa = PBXBuildFile; fileRef = 1DBBBA49176DE7C100ACF8AC /* network.books.json */; };
 		1DBBBA50176E141900ACF8AC /* INOHHTTPStubsHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DBBBA4F176E141900ACF8AC /* INOHHTTPStubsHelper.m */; };
+		1DBBBA53176E1B9E00ACF8AC /* UIViewController+CatalogService.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DBBBA52176E1B9D00ACF8AC /* UIViewController+CatalogService.m */; };
+		1DBBBA57176E22C600ACF8AC /* INLogFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DBBBA56176E22C600ACF8AC /* INLogFormatter.m */; };
 		CF21215D4FFE4E27B770A15C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 742F461F5EC440939C19832A /* libPods.a */; };
 		FFD0BBFA25FF44DA89578B47 /* libPods-test.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 85B014C887034962A8AD126F /* libPods-test.a */; };
 /* End PBXBuildFile section */
@@ -109,6 +111,10 @@
 		1DBBBA49176DE7C100ACF8AC /* network.books.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = network.books.json; sourceTree = "<group>"; };
 		1DBBBA4E176E141800ACF8AC /* INOHHTTPStubsHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INOHHTTPStubsHelper.h; sourceTree = "<group>"; };
 		1DBBBA4F176E141900ACF8AC /* INOHHTTPStubsHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = INOHHTTPStubsHelper.m; sourceTree = "<group>"; };
+		1DBBBA51176E1B9D00ACF8AC /* UIViewController+CatalogService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+CatalogService.h"; sourceTree = "<group>"; };
+		1DBBBA52176E1B9D00ACF8AC /* UIViewController+CatalogService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+CatalogService.m"; sourceTree = "<group>"; };
+		1DBBBA55176E22C600ACF8AC /* INLogFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INLogFormatter.h; sourceTree = "<group>"; };
+		1DBBBA56176E22C600ACF8AC /* INLogFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = INLogFormatter.m; sourceTree = "<group>"; };
 		62465A3AA16D46CA9D40ABAD /* Pods-test.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-test.xcconfig"; path = "../Pods/Pods-test.xcconfig"; sourceTree = SOURCE_ROOT; };
 		742F461F5EC440939C19832A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		85B014C887034962A8AD126F /* libPods-test.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-test.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -244,6 +250,8 @@
 				1DA26BEF176CAB0200D30ABF /* GGBookViewController.m */,
 				1DA26BF0176CAB0200D30ABF /* GGCatalogViewController.h */,
 				1DA26BF1176CAB0200D30ABF /* GGCatalogViewController.m */,
+				1DBBBA51176E1B9D00ACF8AC /* UIViewController+CatalogService.h */,
+				1DBBBA52176E1B9D00ACF8AC /* UIViewController+CatalogService.m */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -251,6 +259,7 @@
 		1DA26BF2176CAB0200D30ABF /* helpers */ = {
 			isa = PBXGroup;
 			children = (
+				1DBBBA54176E229E00ACF8AC /* logging */,
 				1DBBBA34176CCA4900ACF8AC /* pagination */,
 				1DA26C2C176CB0F200D30ABF /* mappings */,
 				1DA26C3E176CB8BE00D30ABF /* GGClientAssembly.h */,
@@ -484,6 +493,15 @@
 			path = pagination;
 			sourceTree = "<group>";
 		};
+		1DBBBA54176E229E00ACF8AC /* logging */ = {
+			isa = PBXGroup;
+			children = (
+				1DBBBA55176E22C600ACF8AC /* INLogFormatter.h */,
+				1DBBBA56176E22C600ACF8AC /* INLogFormatter.m */,
+			);
+			path = logging;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -670,6 +688,8 @@
 				1DBBBA37176CCAB100ACF8AC /* INPaginator.m in Sources */,
 				1DBBBA3B176CD15300ACF8AC /* INOffsetBasedPaginationState.m in Sources */,
 				1DBBBA46176DAF7500ACF8AC /* RKObjectManager+GGClientConfiguration.m in Sources */,
+				1DBBBA53176E1B9E00ACF8AC /* UIViewController+CatalogService.m in Sources */,
+				1DBBBA57176E22C600ACF8AC /* INLogFormatter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

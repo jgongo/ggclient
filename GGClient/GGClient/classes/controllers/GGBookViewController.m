@@ -8,18 +8,20 @@
 
 #import "GGBookViewController.h"
 
+
 @interface GGBookViewController ()
 - (void)configureView;
 @end
+
 
 @implementation GGBookViewController
 
 #pragma mark - Managing the detail item
 
-- (void)setDetailItem:(id)newDetailItem
+- (void)setBook:(GGBook *)book
 {
-    if (_detailItem != newDetailItem) {
-        _detailItem = newDetailItem;
+    if (_book != book) {
+        book = book;
         
         // Update the view.
         [self configureView];
@@ -30,8 +32,8 @@
 {
     // Update the user interface for the detail item.
 
-    if (self.detailItem) {
-        self.detailDescriptionLabel.text = [self.detailItem description];
+    if (self.book) {
+        self.detailDescriptionLabel.text = self.book.title;
     }
 }
 
