@@ -9,65 +9,15 @@
 #import "GGCatalogViewController.h"
 #import "UIViewController+CatalogService.h"
 #import "GGBookViewController.h"
-#import "INPaginator.h"
-#import "INOffsetBasedPaginationState.h"
+#import "GGCatalogPageRetriever.h"
 
 
-@interface GGCatalogPaginator : NSObject <INPageRetriever>
-@property (nonatomic        ) NSUInteger        itemsPerPage;
-@property (nonatomic, strong) GGCatalogService *catalogService;
-- (id)initWithCatalogService:(GGCatalogService *)catalogService;
-@end
-
-
-@implementation GGCatalogPaginator
-
-- (id)initWithCatalogService:(GGCatalogService *)catalogService {
-    self = [super init];
-    if (self) {
-        _catalogService = catalogService;
-    }
-    return self;
-}
-
-- (void)retrieveFirstPageWithItems:(NSUInteger)itemsPerPage onSuccess:(PageRetrievalSuccessBlock)onSuccess onError:(PageErrorBlock)onError {
-    NSAssert(itemsPerPage > 0, @"Items per page should be greater than 0.");
-    self.itemsPerPage = itemsPerPage;
-    NSDictionary *modifiers = @{GGRequestModifierCountKey: @(self.itemsPerPage)};
-    [self.catalogService getBookListWithModifiers:modifiers onSuccess:^(NSArray *books) {
-        if (onSuccess) {
-            INOffsetBasedPaginationState *paginationState = [[INOffsetBasedPaginationState alloc] initWithTotal:books.count <= self.itemsPerPage ? books.count : NSUIntegerMax offset:books.count];
-            onSuccess(books, paginationState);
-        }
-    } onError:^(NSError *error) {
-        if (onError) { onError(error); }
-    }];
-}
-
-- (void)retrieveNextPageFrom:(id<INPaginationState>)paginationState onSuccess:(PageRetrievalSuccessBlock)onSuccess onError:(PageErrorBlock)onError {
-    NSAssert(self.itemsPerPage > 0, @"Items per page should be greater than 0. Maybe you haven't invoked first page?");
-    INOffsetBasedPaginationState *offsetBasedState = paginationState;
-    NSDictionary *modifiers = @{GGRequestModifierCountKey: @(self.itemsPerPage), GGRequestModifierOffsetKey: @(offsetBasedState.offset)};
-    [self.catalogService getBookListWithModifiers:modifiers onSuccess:^(NSArray *books) {
-        if (onSuccess) {
-            INOffsetBasedPaginationState *paginationState = [[INOffsetBasedPaginationState alloc] initWithTotal:books.count <= self.itemsPerPage ? offsetBasedState.offset + books.count : NSUIntegerMax
-                                                                                                         offset:offsetBasedState.offset + books.count];
-            onSuccess(books, paginationState);
-        }
-    } onError:^(NSError *error) {
-        if (onError) { onError(error); }
-    }];
-}
-
-@end
-
-
-#pragma mark - Class extension
+#pragma mark Class extension
 
 @interface GGCatalogViewController ()
-@property (nonatomic, strong) GGCatalogPaginator   *paginator;
-@property (nonatomic, strong) id<INPaginationState> paginationState;
-@property (nonatomic, strong) NSMutableArray       *books;
+@property (nonatomic, strong) GGCatalogPageRetriever *paginator;
+@property (nonatomic, strong) id<INPaginationState>   paginationState;
+@property (nonatomic, strong) NSMutableArray         *books;
 @end
 
 
@@ -78,7 +28,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.paginator = [[GGCatalogPaginator alloc] initWithCatalogService:self.catalogService];
+    self.paginator = [[GGCatalogPageRetriever alloc] initWithCatalogService:self.catalogService];
     [self.paginator retrieveFirstPageWithItems:5 onSuccess:^(NSArray *page, id<INPaginationState> paginationState) {
         self.books = [NSMutableArray arrayWithArray:page];
         self.paginationState = paginationState;

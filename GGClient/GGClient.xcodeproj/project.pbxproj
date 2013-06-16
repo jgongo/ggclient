@@ -43,6 +43,7 @@
 		1DBBBA50176E141900ACF8AC /* INOHHTTPStubsHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DBBBA4F176E141900ACF8AC /* INOHHTTPStubsHelper.m */; };
 		1DBBBA53176E1B9E00ACF8AC /* UIViewController+CatalogService.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DBBBA52176E1B9D00ACF8AC /* UIViewController+CatalogService.m */; };
 		1DBBBA57176E22C600ACF8AC /* INLogFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DBBBA56176E22C600ACF8AC /* INLogFormatter.m */; };
+		1DBBBA5A176E245500ACF8AC /* GGCatalogPageRetriever.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DBBBA59176E245400ACF8AC /* GGCatalogPageRetriever.m */; };
 		CF21215D4FFE4E27B770A15C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 742F461F5EC440939C19832A /* libPods.a */; };
 		FFD0BBFA25FF44DA89578B47 /* libPods-test.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 85B014C887034962A8AD126F /* libPods-test.a */; };
 /* End PBXBuildFile section */
@@ -115,6 +116,8 @@
 		1DBBBA52176E1B9D00ACF8AC /* UIViewController+CatalogService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+CatalogService.m"; sourceTree = "<group>"; };
 		1DBBBA55176E22C600ACF8AC /* INLogFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INLogFormatter.h; sourceTree = "<group>"; };
 		1DBBBA56176E22C600ACF8AC /* INLogFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = INLogFormatter.m; sourceTree = "<group>"; };
+		1DBBBA58176E245400ACF8AC /* GGCatalogPageRetriever.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGCatalogPageRetriever.h; sourceTree = "<group>"; };
+		1DBBBA59176E245400ACF8AC /* GGCatalogPageRetriever.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGCatalogPageRetriever.m; sourceTree = "<group>"; };
 		62465A3AA16D46CA9D40ABAD /* Pods-test.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-test.xcconfig"; path = "../Pods/Pods-test.xcconfig"; sourceTree = SOURCE_ROOT; };
 		742F461F5EC440939C19832A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		85B014C887034962A8AD126F /* libPods-test.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-test.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -248,6 +251,8 @@
 			children = (
 				1DA26BEE176CAB0200D30ABF /* GGBookViewController.h */,
 				1DA26BEF176CAB0200D30ABF /* GGBookViewController.m */,
+				1DBBBA58176E245400ACF8AC /* GGCatalogPageRetriever.h */,
+				1DBBBA59176E245400ACF8AC /* GGCatalogPageRetriever.m */,
 				1DA26BF0176CAB0200D30ABF /* GGCatalogViewController.h */,
 				1DA26BF1176CAB0200D30ABF /* GGCatalogViewController.m */,
 				1DBBBA51176E1B9D00ACF8AC /* UIViewController+CatalogService.h */,
@@ -690,6 +695,7 @@
 				1DBBBA46176DAF7500ACF8AC /* RKObjectManager+GGClientConfiguration.m in Sources */,
 				1DBBBA53176E1B9E00ACF8AC /* UIViewController+CatalogService.m in Sources */,
 				1DBBBA57176E22C600ACF8AC /* INLogFormatter.m in Sources */,
+				1DBBBA5A176E245500ACF8AC /* GGCatalogPageRetriever.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
