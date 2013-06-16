@@ -30,7 +30,7 @@ describe(@"GGCatalogService", ^{
     });
     
     context(@"when retrieving books", ^{
-        __block NSArray              *books;
+        __block NSArray *books;
         
         context(@"params in request", ^{
             __block NSDictionary *params;
@@ -90,6 +90,59 @@ describe(@"GGCatalogService", ^{
             
             context(@"without an error block", ^{
                 beforeEach(^{ [service getBookListWithModifiers:nil onSuccess:^(NSArray *books) {} onError:nil]; });
+                it(@"shouldn't fail", ^{ /* Empty example to exercise method invocation without error block */ });
+            });
+        });
+    });
+    
+    context(@"when retrieving a book", ^{
+        __block GGBook *book;
+        
+        context(@"successfully", ^{
+            beforeEach(^{
+                NSString *getBookPathPattern = [objectManager.router.routeSet routeForClass:[GGBook class] method:RKRequestMethodGET].pathPattern;
+                [INOHHTTPStubsHelper stubHTTPResponseForPathPattern:getBookPathPattern method:@"GET" withFixtureName:@"network.book.json"];
+
+                [service getBookWithId:@"book-id" onSuccess:^(GGBook *actualBook) {
+                    book = actualBook;
+                } onError:nil];
+            });
+            
+            it(@"should correctly return the book", ^{
+                [[expectFutureValue(book)          shouldEventually] beNonNil];
+                [[expectFutureValue(book.title)    shouldEventually] equal:@"The Hitch-hikers Guide to the Galaxy"];
+                [[expectFutureValue(book.author)   shouldEventually] equal:@"Douglas Adams"];
+                [[expectFutureValue(book.price)    shouldEventually] equal:[NSDecimalNumber decimalNumberWithString:@"5.62"]];
+                [[expectFutureValue(book.imageURL) shouldEventually] equal:[NSURL URLWithString:@"http://assignment.golgek.mobi/static/42.jpg"]];
+            });
+            
+            context(@"without a book id", ^{
+                it(@"should raise an exception", ^{
+                    [[theBlock(^{ [service getBookWithId:nil onSuccess:^(GGBook *book) {} onError:nil]; }) should] raise];
+                });
+            });
+            
+            context(@"without a success block", ^{
+                it(@"should raise an exception", ^{
+                    [[theBlock(^{ [service getBookWithId:@"book-id" onSuccess:nil onError:nil]; }) should] raise];
+                });
+            });
+        });
+        
+        context(@"unsuccessfully", ^{
+            beforeAll(^{
+                NSString *getBookPathPattern = [objectManager.router.routeSet routeForClass:[GGBook class] method:RKRequestMethodGET].pathPattern;
+                [INOHHTTPStubsHelper stubHTTPErrorResponseForPathPattern:getBookPathPattern method:@"GET" withStatusCodes:500];
+            });
+            
+            context(@"with an error block", ^{
+                __block NSError *error;
+                beforeEach(^{ error = nil; [service getBookWithId:@"book-id" onSuccess:^(GGBook *book) {} onError:^(NSError *responseError){ error = responseError; }]; });
+                it(@"should invoke the block", ^{ [[expectFutureValue(error) shouldEventually] beNonNil]; });
+            });
+            
+            context(@"without an error block", ^{
+                beforeEach(^{ [service getBookWithId:@"book-id" onSuccess:^(GGBook *book) {} onError:nil]; });
                 it(@"shouldn't fail", ^{ /* Empty example to exercise method invocation without error block */ });
             });
         });

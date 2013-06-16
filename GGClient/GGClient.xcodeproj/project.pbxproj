@@ -44,6 +44,7 @@
 		1DBBBA53176E1B9E00ACF8AC /* UIViewController+CatalogService.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DBBBA52176E1B9D00ACF8AC /* UIViewController+CatalogService.m */; };
 		1DBBBA57176E22C600ACF8AC /* INLogFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DBBBA56176E22C600ACF8AC /* INLogFormatter.m */; };
 		1DBBBA5A176E245500ACF8AC /* GGCatalogPageRetriever.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DBBBA59176E245400ACF8AC /* GGCatalogPageRetriever.m */; };
+		1DBBBA5C176E32FB00ACF8AC /* network.book.json in Resources */ = {isa = PBXBuildFile; fileRef = 1DBBBA5B176E32FB00ACF8AC /* network.book.json */; };
 		CF21215D4FFE4E27B770A15C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 742F461F5EC440939C19832A /* libPods.a */; };
 		FFD0BBFA25FF44DA89578B47 /* libPods-test.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 85B014C887034962A8AD126F /* libPods-test.a */; };
 /* End PBXBuildFile section */
@@ -118,6 +119,7 @@
 		1DBBBA56176E22C600ACF8AC /* INLogFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = INLogFormatter.m; sourceTree = "<group>"; };
 		1DBBBA58176E245400ACF8AC /* GGCatalogPageRetriever.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGCatalogPageRetriever.h; sourceTree = "<group>"; };
 		1DBBBA59176E245400ACF8AC /* GGCatalogPageRetriever.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGCatalogPageRetriever.m; sourceTree = "<group>"; };
+		1DBBBA5B176E32FB00ACF8AC /* network.book.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = network.book.json; sourceTree = "<group>"; };
 		62465A3AA16D46CA9D40ABAD /* Pods-test.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-test.xcconfig"; path = "../Pods/Pods-test.xcconfig"; sourceTree = SOURCE_ROOT; };
 		742F461F5EC440939C19832A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		85B014C887034962A8AD126F /* libPods-test.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-test.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -453,6 +455,7 @@
 			isa = PBXGroup;
 			children = (
 				1DBBBA49176DE7C100ACF8AC /* network.books.json */,
+				1DBBBA5B176E32FB00ACF8AC /* network.book.json */,
 			);
 			path = network;
 			sourceTree = "<group>";
@@ -599,6 +602,7 @@
 				1DA26BDD176CA79000D30ABF /* InfoPlist.strings in Resources */,
 				1DA26C27176CAFC400D30ABF /* book.json in Resources */,
 				1DBBBA4A176DE7C100ACF8AC /* network.books.json in Resources */,
+				1DBBBA5C176E32FB00ACF8AC /* network.book.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

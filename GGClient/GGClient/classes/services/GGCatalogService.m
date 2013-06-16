@@ -60,6 +60,17 @@ NSString* const GGRequestModifierOffsetKey = @"offset";
 }
 
 - (void)getBookWithId:(NSString *)bookId onSuccess:(BookSuccessBlock)onSuccess onError:(ErrorBlock)onError {
+    NSAssert(bookId,    @"Can't retrieve a book without its id");
+    NSAssert(onSuccess, @"Success block must be present in order to get list of books");
+    GGBook *book = [[GGBook alloc] init];
+    book.identifier = bookId;
+    [self.objectManager getObject:book path:nil parameters:nil success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
+        DDLogVerbose(@"Book correctly retrieved: %@", [mappingResult firstObject]);
+        onSuccess([mappingResult firstObject]);
+    } failure:^(RKObjectRequestOperation *operation, NSError *error) {
+        DDLogWarn(@"Error while retrieving book: %@", error);
+        if (onError) { onError([self errorWithError:error failedOperation:operation]); }
+    }];
 }
 
 @end
