@@ -24,7 +24,6 @@
 		1DA26C2A176CAFE000D30ABF /* GGBook.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DA26C29176CAFE000D30ABF /* GGBook.m */; };
 		1DA26C31176CB23000D30ABF /* GGBook+RKMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DA26C30176CB22F00D30ABF /* GGBook+RKMapping.m */; };
 		1DA26C33176CB2CB00D30ABF /* GGBookMappingSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DA26C32176CB2CB00D30ABF /* GGBookMappingSpec.m */; };
-		1DA26C37176CB40F00D30ABF /* GGClientMappingCatalog.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DA26C36176CB40E00D30ABF /* GGClientMappingCatalog.m */; };
 		1DA26C3A176CB66100D30ABF /* INRestKitHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DA26C39176CB66100D30ABF /* INRestKitHelper.m */; };
 		1DA26C3D176CB80900D30ABF /* INMappedEntitiesCatalog.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DA26C3C176CB80900D30ABF /* INMappedEntitiesCatalog.m */; };
 		1DA26C40176CB8C100D30ABF /* GGClientAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DA26C3F176CB8BF00D30ABF /* GGClientAssembly.m */; };
@@ -37,6 +36,11 @@
 		1DBBBA3B176CD15300ACF8AC /* INOffsetBasedPaginationState.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DBBBA39176CCB7400ACF8AC /* INOffsetBasedPaginationState.m */; };
 		1DBBBA3F176CE0DC00ACF8AC /* INOffsetBasedPaginationStateSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DBBBA3E176CE0DC00ACF8AC /* INOffsetBasedPaginationStateSpec.m */; };
 		1DBBBA41176DA4AC00ACF8AC /* INPaginatorSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DBBBA40176DA4AC00ACF8AC /* INPaginatorSpec.m */; };
+		1DBBBA43176DAB4100ACF8AC /* GGCatalogServiceSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DBBBA42176DAB4100ACF8AC /* GGCatalogServiceSpec.m */; };
+		1DBBBA46176DAF7500ACF8AC /* RKObjectManager+GGClientConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DBBBA45176DAF7500ACF8AC /* RKObjectManager+GGClientConfiguration.m */; };
+		1DBBBA48176DB56B00ACF8AC /* catalog.properties in Resources */ = {isa = PBXBuildFile; fileRef = 1DBBBA47176DB56B00ACF8AC /* catalog.properties */; };
+		1DBBBA4A176DE7C100ACF8AC /* network.books.json in Resources */ = {isa = PBXBuildFile; fileRef = 1DBBBA49176DE7C100ACF8AC /* network.books.json */; };
+		1DBBBA50176E141900ACF8AC /* INOHHTTPStubsHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DBBBA4F176E141900ACF8AC /* INOHHTTPStubsHelper.m */; };
 		CF21215D4FFE4E27B770A15C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 742F461F5EC440939C19832A /* libPods.a */; };
 		FFD0BBFA25FF44DA89578B47 /* libPods-test.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 85B014C887034962A8AD126F /* libPods-test.a */; };
 /* End PBXBuildFile section */
@@ -79,8 +83,6 @@
 		1DA26C30176CB22F00D30ABF /* GGBook+RKMapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GGBook+RKMapping.m"; sourceTree = "<group>"; };
 		1DA26C32176CB2CB00D30ABF /* GGBookMappingSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGBookMappingSpec.m; sourceTree = "<group>"; };
 		1DA26C34176CB3D100D30ABF /* INMappingCatalog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = INMappingCatalog.h; sourceTree = "<group>"; };
-		1DA26C35176CB40D00D30ABF /* GGClientMappingCatalog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGClientMappingCatalog.h; sourceTree = "<group>"; };
-		1DA26C36176CB40E00D30ABF /* GGClientMappingCatalog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGClientMappingCatalog.m; sourceTree = "<group>"; };
 		1DA26C38176CB66100D30ABF /* INRestKitHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INRestKitHelper.h; sourceTree = "<group>"; };
 		1DA26C39176CB66100D30ABF /* INRestKitHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = INRestKitHelper.m; sourceTree = "<group>"; };
 		1DA26C3B176CB80800D30ABF /* INMappedEntitiesCatalog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INMappedEntitiesCatalog.h; sourceTree = "<group>"; };
@@ -100,6 +102,13 @@
 		1DBBBA39176CCB7400ACF8AC /* INOffsetBasedPaginationState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = INOffsetBasedPaginationState.m; sourceTree = "<group>"; };
 		1DBBBA3E176CE0DC00ACF8AC /* INOffsetBasedPaginationStateSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = INOffsetBasedPaginationStateSpec.m; sourceTree = "<group>"; };
 		1DBBBA40176DA4AC00ACF8AC /* INPaginatorSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = INPaginatorSpec.m; sourceTree = "<group>"; };
+		1DBBBA42176DAB4100ACF8AC /* GGCatalogServiceSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGCatalogServiceSpec.m; sourceTree = "<group>"; };
+		1DBBBA44176DAF7500ACF8AC /* RKObjectManager+GGClientConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RKObjectManager+GGClientConfiguration.h"; sourceTree = "<group>"; };
+		1DBBBA45176DAF7500ACF8AC /* RKObjectManager+GGClientConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RKObjectManager+GGClientConfiguration.m"; sourceTree = "<group>"; };
+		1DBBBA47176DB56B00ACF8AC /* catalog.properties */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = catalog.properties; sourceTree = "<group>"; };
+		1DBBBA49176DE7C100ACF8AC /* network.books.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = network.books.json; sourceTree = "<group>"; };
+		1DBBBA4E176E141800ACF8AC /* INOHHTTPStubsHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INOHHTTPStubsHelper.h; sourceTree = "<group>"; };
+		1DBBBA4F176E141900ACF8AC /* INOHHTTPStubsHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = INOHHTTPStubsHelper.m; sourceTree = "<group>"; };
 		62465A3AA16D46CA9D40ABAD /* Pods-test.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-test.xcconfig"; path = "../Pods/Pods-test.xcconfig"; sourceTree = SOURCE_ROOT; };
 		742F461F5EC440939C19832A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		85B014C887034962A8AD126F /* libPods-test.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-test.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -246,6 +255,8 @@
 				1DA26C2C176CB0F200D30ABF /* mappings */,
 				1DA26C3E176CB8BE00D30ABF /* GGClientAssembly.h */,
 				1DA26C3F176CB8BF00D30ABF /* GGClientAssembly.m */,
+				1DBBBA44176DAF7500ACF8AC /* RKObjectManager+GGClientConfiguration.h */,
+				1DBBBA45176DAF7500ACF8AC /* RKObjectManager+GGClientConfiguration.m */,
 			);
 			path = helpers;
 			sourceTree = "<group>";
@@ -292,6 +303,7 @@
 		1DA26C0C176CABA100D30ABF /* configuration */ = {
 			isa = PBXGroup;
 			children = (
+				1DBBBA47176DB56B00ACF8AC /* catalog.properties */,
 			);
 			path = configuration;
 			sourceTree = "<group>";
@@ -380,6 +392,7 @@
 		1DA26C20176CABB900D30ABF /* services */ = {
 			isa = PBXGroup;
 			children = (
+				1DBBBA42176DAB4100ACF8AC /* GGCatalogServiceSpec.m */,
 			);
 			path = services;
 			sourceTree = "<group>";
@@ -391,6 +404,8 @@
 				1DA26C45176CB97D00D30ABF /* GGClientAssembly+Testing.m */,
 				1DA26C38176CB66100D30ABF /* INRestKitHelper.h */,
 				1DA26C39176CB66100D30ABF /* INRestKitHelper.m */,
+				1DBBBA4E176E141800ACF8AC /* INOHHTTPStubsHelper.h */,
+				1DBBBA4F176E141900ACF8AC /* INOHHTTPStubsHelper.m */,
 			);
 			path = "test-helpers";
 			sourceTree = "<group>";
@@ -423,6 +438,7 @@
 		1DA26C25176CAF6B00D30ABF /* network */ = {
 			isa = PBXGroup;
 			children = (
+				1DBBBA49176DE7C100ACF8AC /* network.books.json */,
 			);
 			path = network;
 			sourceTree = "<group>";
@@ -440,8 +456,6 @@
 			children = (
 				1DA26C2F176CB22F00D30ABF /* GGBook+RKMapping.h */,
 				1DA26C30176CB22F00D30ABF /* GGBook+RKMapping.m */,
-				1DA26C35176CB40D00D30ABF /* GGClientMappingCatalog.h */,
-				1DA26C36176CB40E00D30ABF /* GGClientMappingCatalog.m */,
 				1DA26C3B176CB80800D30ABF /* INMappedEntitiesCatalog.h */,
 				1DA26C3C176CB80900D30ABF /* INMappedEntitiesCatalog.m */,
 				1DA26C2E176CB21600D30ABF /* INMappedEntity.h */,
@@ -551,6 +565,7 @@
 				1DBBBA29176CC32600ACF8AC /* Default.png in Resources */,
 				1DBBBA2B176CC32E00ACF8AC /* Default@2x.png in Resources */,
 				1DBBBA2D176CC33500ACF8AC /* Default-568h@2x.png in Resources */,
+				1DBBBA48176DB56B00ACF8AC /* catalog.properties in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -560,6 +575,7 @@
 			files = (
 				1DA26BDD176CA79000D30ABF /* InfoPlist.strings in Resources */,
 				1DA26C27176CAFC400D30ABF /* book.json in Resources */,
+				1DBBBA4A176DE7C100ACF8AC /* network.books.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -648,12 +664,12 @@
 				1DA26BF8176CAB0200D30ABF /* GGMasterViewController.m in Sources */,
 				1DA26C2A176CAFE000D30ABF /* GGBook.m in Sources */,
 				1DA26C31176CB23000D30ABF /* GGBook+RKMapping.m in Sources */,
-				1DA26C37176CB40F00D30ABF /* GGClientMappingCatalog.m in Sources */,
 				1DA26C3D176CB80900D30ABF /* INMappedEntitiesCatalog.m in Sources */,
 				1DA26C40176CB8C100D30ABF /* GGClientAssembly.m in Sources */,
 				1DBBBA30176CC8B500ACF8AC /* GGCatalogService.m in Sources */,
 				1DBBBA37176CCAB100ACF8AC /* INPaginator.m in Sources */,
 				1DBBBA3B176CD15300ACF8AC /* INOffsetBasedPaginationState.m in Sources */,
+				1DBBBA46176DAF7500ACF8AC /* RKObjectManager+GGClientConfiguration.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -666,6 +682,8 @@
 				1DA26C46176CB97D00D30ABF /* GGClientAssembly+Testing.m in Sources */,
 				1DBBBA3F176CE0DC00ACF8AC /* INOffsetBasedPaginationStateSpec.m in Sources */,
 				1DBBBA41176DA4AC00ACF8AC /* INPaginatorSpec.m in Sources */,
+				1DBBBA43176DAB4100ACF8AC /* GGCatalogServiceSpec.m in Sources */,
+				1DBBBA50176E141900ACF8AC /* INOHHTTPStubsHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

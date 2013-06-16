@@ -11,4 +11,6 @@
 
 @interface GGClientAssembly : TyphoonAssembly
 - (id)mappingCatalog;
+- (id)objectManager;
+- (id)catalogService;
 @end
