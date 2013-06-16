@@ -8,6 +8,7 @@
 
 #import "GGBookViewController.h"
 #import <UIActivityIndicator-for-SDWebImage/UIImageView+UIActivityIndicatorForSDWebImage.h>
+#import <TSMessages/TSMessage.h>
 #import "UIViewController+CatalogService.h"
 
 
@@ -26,7 +27,11 @@
 {
     [super viewDidLoad];
     [self configureView];
-    
+    [self.catalogService getBookWithId:self.book.identifier onSuccess:^(GGBook *book) {
+        self.book = book;
+    } onError:^(NSError *error) {
+        [TSMessage showNotificationInViewController:self withTitle:@"Error" withMessage:@"Ups, there was some error retrieving book info" withType:TSMessageNotificationTypeError withDuration:1.0];
+    }];
 }
 
 - (void)setBook:(GGBook *)book
@@ -39,11 +44,18 @@
 
 - (void)configureView
 {
+    static NSNumberFormatter *priceFormatter;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        priceFormatter = [[NSNumberFormatter alloc] init];
+        [priceFormatter setNumberStyle: NSNumberFormatterCurrencyStyle];
+    });
+    
     if (self.book) {
         self.navigationItem.title = self.book.title;
         self.titleLabel.text  = self.book.title;
         self.authorLabel.text = self.book.author;
-//        self.priceLabel.text  = self.book.price;
+        self.priceLabel.text  = [priceFormatter stringFromNumber:self.book.price];
         if (self.book.imageURL) {
             [self.imageView setImageWithURL:self.book.imageURL usingActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
         }
