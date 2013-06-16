@@ -31,14 +31,13 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
+    [refreshControl addTarget:self action:@selector(refresh) forControlEvents:UIControlEventValueChanged];
+    self.refreshControl = refreshControl;
+    
     self.paginator = [[GGCatalogPageRetriever alloc] initWithCatalogService:self.catalogService];
-    [self.paginator retrieveFirstPageWithItems:5 onSuccess:^(NSArray *page, id<INPaginationState> paginationState) {
-        self.books = [NSMutableArray arrayWithArray:page];
-        self.paginationState = paginationState;
-        [self.tableView reloadData];
-    } onError:^(NSError *error) {
-        [TSMessage showNotificationInViewController:self withTitle:@"Error" withMessage:@"Ups, there was some error retrieving book list" withType:TSMessageNotificationTypeError withDuration:3.0];
-    }];
+    [self retrieveFirstPageOfCatalog];
 }
 
 #pragma mark - Page retrieval
@@ -49,6 +48,18 @@
         [indexPaths addObject:[NSIndexPath indexPathForRow:row inSection:0]];
     }
     return indexPaths;
+}
+
+- (void)retrieveFirstPageOfCatalog {
+    [self.paginator retrieveFirstPageWithItems:5 onSuccess:^(NSArray *page, id<INPaginationState> paginationState) {
+        [self.refreshControl endRefreshing];
+        self.books = [NSMutableArray arrayWithArray:page];
+        self.paginationState = paginationState;
+        [self.tableView reloadData];
+    } onError:^(NSError *error) {
+        [self.refreshControl endRefreshing];
+        [TSMessage showNotificationInViewController:self withTitle:@"Error" withMessage:@"Ups, there was some error retrieving book list" withType:TSMessageNotificationTypeError withDuration:3.0];
+    }];
 }
 
 - (void)retrieveNextPageOfCatalog {
@@ -65,6 +76,12 @@
         [self.tableView deleteRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:self.books.count inSection:0]] withRowAnimation:UITableViewRowAnimationFade];
         [TSMessage showNotificationInViewController:self withTitle:@"Error" withMessage:@"Ups, there was some error retrieving book list" withType:TSMessageNotificationTypeError withDuration:3.0];
     }];
+}
+
+#pragma mark - Refresh
+
+- (void)refresh {
+    [self retrieveFirstPageOfCatalog];
 }
 
 #pragma mark - Table View
