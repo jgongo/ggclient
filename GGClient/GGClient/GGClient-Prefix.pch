@@ -21,4 +21,15 @@
         #import <SystemConfiguration/SystemConfiguration.h>
         #import <CoreServices/CoreServices.h>
     #endif
+
+    // CocoaLumberjack logging available in all files
+    #import <CocoaLumberjack/DDLog.h>
+
+    // Cocoa Lumberjack default log level
+    #if defined (CONFIGURATION_Debug) || defined (CONFIGURATION_Testing)
+        static int __attribute__((unused)) ddLogLevel = LOG_LEVEL_VERBOSE;
+    #else
+        static int __attribute__((unused)) ddLogLevel = LOG_LEVEL_WARN;
+    #endif
+
 #endif
