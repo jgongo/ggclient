@@ -27,5 +27,5 @@ target :test, :exclusive => true do
     link_with 'GGClientTests'
     pod 'Kiwi',           '2.0.6'
     pod 'RKKiwiMatchers', '0.20.0'
-    pod 'Nocilla',        '0.5'
+    pod 'OHHTTPStubs',    '1.1.1'
 end
