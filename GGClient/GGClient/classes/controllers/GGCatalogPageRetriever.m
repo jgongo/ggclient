@@ -26,7 +26,7 @@
     NSDictionary *modifiers = @{GGRequestModifierCountKey: @(self.itemsPerPage)};
     [self.catalogService getBookListWithModifiers:modifiers onSuccess:^(NSArray *books) {
         if (onSuccess) {
-            INOffsetBasedPaginationState *paginationState = [[INOffsetBasedPaginationState alloc] initWithTotal:books.count <= self.itemsPerPage ? books.count : NSUIntegerMax offset:books.count];
+            INOffsetBasedPaginationState *paginationState = [[INOffsetBasedPaginationState alloc] initWithTotal:books.count < self.itemsPerPage ? books.count : NSUIntegerMax offset:books.count];
             onSuccess(books, paginationState);
         }
     } onError:^(NSError *error) {
@@ -40,7 +40,7 @@
     NSDictionary *modifiers = @{GGRequestModifierCountKey: @(self.itemsPerPage), GGRequestModifierOffsetKey: @(offsetBasedState.offset)};
     [self.catalogService getBookListWithModifiers:modifiers onSuccess:^(NSArray *books) {
         if (onSuccess) {
-            INOffsetBasedPaginationState *paginationState = [[INOffsetBasedPaginationState alloc] initWithTotal:books.count <= self.itemsPerPage ? offsetBasedState.offset + books.count : NSUIntegerMax
+            INOffsetBasedPaginationState *paginationState = [[INOffsetBasedPaginationState alloc] initWithTotal:books.count < self.itemsPerPage ? offsetBasedState.offset + books.count : NSUIntegerMax
                                                                                                          offset:offsetBasedState.offset + books.count];
             onSuccess(books, paginationState);
         }
