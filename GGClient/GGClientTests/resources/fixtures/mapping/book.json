@@ -1,0 +1,8 @@
+{
+    "author": "Douglas Adams",
+    "price": 5.62,
+    "image": "http://assignment.golgek.mobi/static/42.jpg",
+    "id": "42",
+    "title": "The Hitch-hikers Guide to the Galaxy",
+    "link": "/api/v10/items/42"
+}

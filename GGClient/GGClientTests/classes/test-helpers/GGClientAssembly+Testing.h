@@ -1,13 +1,14 @@
 //
-//  GGMasterViewController.h
+//  GGClientAssembly+Testing.h
 //  GGClient
 //
 //  Created by Jose Gonzalez Gomez on 15/06/13.
 //  Copyright (c) 2013 OPEN input. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "GGClientAssembly.h"
 
-@interface GGMasterViewController : UITableViewController
 
+@interface GGClientAssembly (Testing)
+- (id)restkitHelper;
 @end

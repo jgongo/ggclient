@@ -11,4 +11,25 @@
 #ifdef __OBJC__
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
+
+    // RestKit 0.20.x frameworks
+    #import <Availability.h>
+    #if __IPHONE_OS_VERSION_MIN_REQUIRED
+        #import <SystemConfiguration/SystemConfiguration.h>
+        #import <MobileCoreServices/MobileCoreServices.h>
+    #else
+        #import <SystemConfiguration/SystemConfiguration.h>
+        #import <CoreServices/CoreServices.h>
+    #endif
+
+    // CocoaLumberjack logging available in all files
+    #import <CocoaLumberjack/DDLog.h>
+
+    // Cocoa Lumberjack default log level
+    #if defined (CONFIGURATION_Debug) || defined (CONFIGURATION_Testing)
+        static int __attribute__((unused)) ddLogLevel = LOG_LEVEL_VERBOSE;
+    #else
+        static int __attribute__((unused)) ddLogLevel = LOG_LEVEL_WARN;
+    #endif
+
 #endif

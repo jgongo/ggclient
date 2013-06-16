@@ -22,10 +22,11 @@ pod 'NSLogger-CocoaLumberjack-connector', '1.3'
 
 # UI
 pod 'TSMessages',      '0.9.3'
+pod 'UIActivityIndicator-for-SDWebImage', '1.0.0'
 
 target :test, :exclusive => true do
     link_with 'GGClientTests'
     pod 'Kiwi',           '2.0.6'
     pod 'RKKiwiMatchers', '0.20.0'
-    pod 'Nocilla',        '0.5'
+    pod 'OHHTTPStubs',    '1.1.1'
 end

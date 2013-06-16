@@ -1,5 +1,5 @@
 //
-//  GGAppDelegate.h
+//  GGMasterViewController.h
 //  GGClient
 //
 //  Created by Jose Gonzalez Gomez on 15/06/13.
@@ -9,6 +9,5 @@
 #import <UIKit/UIKit.h>
 
 
-@interface GGAppDelegate : UIResponder <UIApplicationDelegate>
-@property (strong, nonatomic) UIWindow *window;
+@interface GGCatalogViewController : UITableViewController
 @end
