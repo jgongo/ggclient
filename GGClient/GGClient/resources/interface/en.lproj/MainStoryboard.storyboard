@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12D78" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="3">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="11">
+            <objects>
+                <navigationController id="3" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="4">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="12" kind="relationship" relationship="rootViewController" id="19"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="10" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1" y="64"/>
+        </scene>
+        <!--Catalog View Controller - Master-->
+        <scene sceneID="18">
+            <objects>
+                <tableViewController storyboardIdentifier="" title="Master" id="12" customClass="GGCatalogViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="13">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="BOOK_CELL" textLabel="phq-AM-6qj" style="IBUITableViewCellStyleDefault" id="lJ0-d7-vTF">
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="phq-AM-6qj">
+                                            <rect key="frame" x="10" y="0.0" width="280" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <segue destination="21" kind="push" identifier="segue.book" id="jZb-fq-zAk"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" reuseIdentifier="ACTIVITY_CELL" id="G0U-lt-X5n">
+                                <rect key="frame" x="0.0" y="66" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="rAp-l5-tFd"/>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <constraints>
+                                    <constraint firstItem="rAp-l5-tFd" firstAttribute="centerY" secondItem="G0U-lt-X5n" secondAttribute="centerY" type="default" id="LWQ-jU-qQQ"/>
+                                    <constraint firstItem="rAp-l5-tFd" firstAttribute="centerX" secondItem="G0U-lt-X5n" secondAttribute="centerX" type="default" id="hQg-C1-lpN"/>
+                                </constraints>
+                            </tableViewCell>
+                        </prototypes>
+                        <sections/>
+                        <connections>
+                            <outlet property="dataSource" destination="12" id="16"/>
+                            <outlet property="delegate" destination="12" id="15"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Catalog" id="36"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="17" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="459" y="64"/>
+        </scene>
+        <!--Book View Controller - Detail-->
+        <scene sceneID="24">
+            <objects>
+                <viewController storyboardIdentifier="" title="Detail" id="21" customClass="GGBookViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="22">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hLO-qN-lNt">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" type="user" id="0JA-qE-xCz"/>
+                                    <constraint firstAttribute="height" constant="100" type="user" id="KH1-lc-UcD"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="The book that was never written" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WRp-eE-IP1">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Author" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rhc-Ro-YgI">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="cKt-Md-JJF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LMB-Xx-D7h">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="ZF9-bJ-vqW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jwa-9H-lOl">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="yAd-oQ-Vk0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Price" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o3n-hG-uBu">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Rhc-Ro-YgI" firstAttribute="leading" secondItem="hLO-qN-lNt" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="0AQ-vH-8DG"/>
+                            <constraint firstAttribute="trailing" secondItem="LMB-Xx-D7h" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="6Pk-Ea-lbs"/>
+                            <constraint firstAttribute="trailing" secondItem="jwa-9H-lOl" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="7Pw-1g-jaV"/>
+                            <constraint firstAttribute="trailing" secondItem="WRp-eE-IP1" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Csb-24-ORb"/>
+                            <constraint firstItem="Rhc-Ro-YgI" firstAttribute="top" secondItem="WRp-eE-IP1" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="FSA-Ml-QSH"/>
+                            <constraint firstItem="WRp-eE-IP1" firstAttribute="top" secondItem="22" secondAttribute="top" constant="20" symbolic="YES" type="default" id="HI6-5s-tlQ"/>
+                            <constraint firstItem="jwa-9H-lOl" firstAttribute="top" secondItem="Rhc-Ro-YgI" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="IB0-h4-EsD"/>
+                            <constraint firstItem="LMB-Xx-D7h" firstAttribute="leading" secondItem="hLO-qN-lNt" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="IP5-JK-AQY"/>
+                            <constraint firstItem="jwa-9H-lOl" firstAttribute="leading" secondItem="hLO-qN-lNt" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="T4e-sT-ajU"/>
+                            <constraint firstItem="hLO-qN-lNt" firstAttribute="leading" secondItem="22" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="TD8-yq-sil"/>
+                            <constraint firstItem="o3n-hG-uBu" firstAttribute="top" secondItem="jwa-9H-lOl" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="XTS-A9-Lby"/>
+                            <constraint firstAttribute="trailing" secondItem="Rhc-Ro-YgI" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="YYf-Ri-CU4"/>
+                            <constraint firstItem="WRp-eE-IP1" firstAttribute="leading" secondItem="22" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="bgK-HR-CEh"/>
+                            <constraint firstItem="LMB-Xx-D7h" firstAttribute="top" secondItem="o3n-hG-uBu" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="nWV-pc-GJU"/>
+                            <constraint firstItem="hLO-qN-lNt" firstAttribute="top" secondItem="WRp-eE-IP1" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="oLG-RV-bIh"/>
+                            <constraint firstItem="o3n-hG-uBu" firstAttribute="leading" secondItem="hLO-qN-lNt" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="ov2-nv-zpZ"/>
+                            <constraint firstAttribute="trailing" secondItem="o3n-hG-uBu" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="qCm-0T-mxQ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Detail" id="26"/>
+                    <connections>
+                        <outlet property="authorLabel" destination="jwa-9H-lOl" id="Miz-h9-a5x"/>
+                        <outlet property="imageView" destination="hLO-qN-lNt" id="SBJ-BQ-BrP"/>
+                        <outlet property="priceLabel" destination="LMB-Xx-D7h" id="KtG-jz-IuB"/>
+                        <outlet property="titleLabel" destination="WRp-eE-IP1" id="Hpl-8t-dNH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="23" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="902" y="64"/>
+        </scene>
+    </scenes>
+    <classes>
+        <class className="GGBookViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/GGBookViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="authorLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="imageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="priceLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="titleLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="GGCatalogViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/GGCatalogViewController.h"/>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
